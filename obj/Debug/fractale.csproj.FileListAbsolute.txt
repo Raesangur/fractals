@@ -1,0 +1,10 @@
+C:\Users\1639571\source\repos\fractale\bin\Debug\fractale.exe.config
+C:\Users\1639571\source\repos\fractale\bin\Debug\fractale.exe
+C:\Users\1639571\source\repos\fractale\bin\Debug\fractale.pdb
+C:\Users\1639571\source\repos\fractale\obj\Debug\fractale.csprojAssemblyReference.cache
+C:\Users\1639571\source\repos\fractale\obj\Debug\fractale.Form1.resources
+C:\Users\1639571\source\repos\fractale\obj\Debug\fractale.Properties.Resources.resources
+C:\Users\1639571\source\repos\fractale\obj\Debug\fractale.csproj.GenerateResource.cache
+C:\Users\1639571\source\repos\fractale\obj\Debug\fractale.csproj.CoreCompileInputs.cache
+C:\Users\1639571\source\repos\fractale\obj\Debug\fractale.exe
+C:\Users\1639571\source\repos\fractale\obj\Debug\fractale.pdb
