@@ -48,7 +48,6 @@ namespace fractale
                 tri.Add(t2);
                 tri.Add(t3);
             }
-            //this.Update();
             this.Refresh();
         }
     }

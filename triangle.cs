@@ -14,15 +14,14 @@ namespace fractale
         public Point haut;
         public Point gauche;
         public Point droite;
-        public bool drawn = false;
 
         public triangle(Graphics g, Pen p)
         {
             G = g;
             P = p;
-            gauche = new Point(0, 0);
-            droite = new Point(200, 0);
-            haut = new Point(100, 200);
+            gauche = new Point(50, 625);
+            droite = new Point(650, 625);
+            haut = new Point(350, 25);
         }
         public triangle(triangle t, int section)
         {
@@ -31,32 +30,32 @@ namespace fractale
             if (section == 0)
             {
                 gauche = new Point(t.gauche.X, t.gauche.Y);
-                droite = new Point((t.droite.X - t.gauche.X) / 2, t.droite.Y);
-                haut = new Point((t.droite.X - t.gauche.X) / 4, (t.droite.Y - t.gauche.Y) / 2);
+                droite = new Point(((t.droite.X - t.gauche.X) / 2) + t.gauche.X, t.droite.Y);
+                haut = new Point(((t.droite.X - t.gauche.X) / 4) + t.gauche.X, ((t.haut.Y - t.gauche.Y) / 2) + t.gauche.Y);
             }
             else if(section == 1)
             {
-                gauche = new Point((t.droite.X - t.gauche.X) / 2, t.droite.Y);
+                gauche = new Point(((t.droite.X - t.gauche.X) / 2) + t.gauche.X, t.droite.Y);
                 droite = new Point(t.droite.X, t.droite.Y);
-                haut = new Point(((t.droite.X - t.gauche.X) / 2) + droite.X, (t.droite.Y - t.gauche.Y) / 2);
+                haut = new Point(((droite.X - gauche.X) / 2) + gauche.X,  ((t.haut.Y - t.gauche.Y) / 2) + t.gauche.Y);
             }
             else
             {
-                gauche = new Point((t.droite.X - t.gauche.X) / 4, (t.droite.Y - t.gauche.Y) / 2);
-                droite = new Point(((t.droite.X - t.gauche.X) / 2) + droite.X, (t.droite.Y - t.gauche.Y) / 2);
+                int tempGauche = ((t.droite.X - t.gauche.X) / 2) + t.gauche.X;
+                gauche = new Point(((t.droite.X - t.gauche.X) / 4) + t.gauche.X, ((t.haut.Y - t.gauche.Y) / 2) + t.gauche.Y);
+                droite = new Point((t.droite.X - tempGauche) / 2 + tempGauche, ((t.haut.Y - t.gauche.Y) / 2) + t.gauche.Y);
+
+                //gauche = new Point((t.droite.X - t.gauche.X) / 4, (t.haut.Y - t.gauche.Y) / 2);
+                //droite = new Point(((t.droite.X - t.gauche.X) / 2) + gauche.X, ((t.haut.Y - t.droite.Y) / 2) + t.droite.Y);
                 haut = new Point(t.haut.X, t.haut.Y);
             }
         }
 
         public void draw()
         {
-            if (drawn == false)
-            {
-                G.DrawLine(P, gauche, droite);
-                G.DrawLine(P, droite, haut);
-                G.DrawLine(P, haut, gauche);
-                drawn = true;
-            }
+            G.DrawLine(P, gauche, droite);
+            G.DrawLine(P, droite, haut);
+            G.DrawLine(P, haut, gauche);
         }
     }
 }

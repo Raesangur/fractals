@@ -8,3 +8,13 @@ C:\Users\1639571\source\repos\fractale\obj\Debug\fractale.csproj.GenerateResourc
 C:\Users\1639571\source\repos\fractale\obj\Debug\fractale.csproj.CoreCompileInputs.cache
 C:\Users\1639571\source\repos\fractale\obj\Debug\fractale.exe
 C:\Users\1639571\source\repos\fractale\obj\Debug\fractale.pdb
+E:\GitHub\fractals\bin\Debug\fractale.exe.config
+E:\GitHub\fractals\bin\Debug\fractale.exe
+E:\GitHub\fractals\bin\Debug\fractale.pdb
+E:\GitHub\fractals\obj\Debug\fractale.csprojAssemblyReference.cache
+E:\GitHub\fractals\obj\Debug\fractale.Form1.resources
+E:\GitHub\fractals\obj\Debug\fractale.Properties.Resources.resources
+E:\GitHub\fractals\obj\Debug\fractale.csproj.GenerateResource.cache
+E:\GitHub\fractals\obj\Debug\fractale.csproj.CoreCompileInputs.cache
+E:\GitHub\fractals\obj\Debug\fractale.exe
+E:\GitHub\fractals\obj\Debug\fractale.pdb
