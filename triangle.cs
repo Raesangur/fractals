@@ -14,9 +14,11 @@ namespace fractale
         public Point haut;
         public Point gauche;
         public Point droite;
+	public int sect;
 
         public triangle(Graphics g, Pen p)
         {
+	    sect = 4;
             G = g;
             P = p;
             gauche = new Point(50, 625);
@@ -49,13 +51,23 @@ namespace fractale
                 //droite = new Point(((t.droite.X - t.gauche.X) / 2) + gauche.X, ((t.haut.Y - t.droite.Y) / 2) + t.droite.Y);
                 haut = new Point(t.haut.X, t.haut.Y);
             }
+	    sect = section;
         }
 
         public void draw()
         {
-            G.DrawLine(P, gauche, droite);
-            G.DrawLine(P, droite, haut);
-            G.DrawLine(P, haut, gauche);
+	    if ((sect != 0) && (sect != 1))
+	    {
+            	G.DrawLine(P, gauche, droite);
+	    }
+	    if ((sect != 1) && (sect != 2))
+	    {
+            	G.DrawLine(P, droite, haut);
+	    }
+	    if ((sect != 0) && (sect != 2))
+	    {
+            	G.DrawLine(P, haut, gauche);
+	    }
         }
     }
 }
